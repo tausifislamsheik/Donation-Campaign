@@ -1,24 +1,13 @@
 import {NavLink} from 'react-router-dom';
 import Logo from './Logo';
-import { BiMenu } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
-import { useState } from 'react';
 
 const NavBar = () => {
-    const [open, setOpen] = useState(false)
+    
     return (
         <div>
             <nav className='md:flex justify-between items-center pt-6 '>
                 <Logo></Logo>
-                
                 <ul className='md:flex gap-8'>
-                {/* <div className='md:hidden text-2xl  mt-8' onClick={() => setOpen(!open)}>
-                    {
-                        open === true ? <AiOutlineClose></AiOutlineClose> : <BiMenu></BiMenu>
-                    }
-                
-                </div> */}
-                    
                     <li>
                     <NavLink to="/"
                        className={({ isActive, isPending }) =>
@@ -45,8 +34,6 @@ const NavBar = () => {
                     
                 </ul>
             </nav>
-
-            
         </div>
     );
 };

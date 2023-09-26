@@ -11,9 +11,6 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Cards cards={cards}></Cards>
-            
-            
-
         </div>
     );
 };

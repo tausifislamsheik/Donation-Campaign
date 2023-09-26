@@ -3,7 +3,8 @@ import MainLayout from '../Layout/MainLayout';
 import Home from '../Home/Home';
 import Donation from '../Donation/Donation';
 import Statistics from '../Statistics/Statistics';
-import Card from '../Card/Card';
+import Card from '../Phone/Card';
+
 
 const createdRoute = createBrowserRouter([
     {

@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 
 
 const DonationCard = ({card}) => {
 
-    const {id, donation_list_img, title, category, category_bg_color, card_bg_color, text_color, price} = card || {}
+    const { donation_list_img, title, category, category_bg_color, card_bg_color, text_color, price} = card || {}
 
     return (
         <div style={{background:card_bg_color}} className="card card-side h-48">

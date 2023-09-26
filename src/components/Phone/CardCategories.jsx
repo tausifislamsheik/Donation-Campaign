@@ -1,4 +1,5 @@
-import { setItem } from "localforage";
+/* eslint-disable react/prop-types */
+// import { setItem } from "localforage";
 import Swal from "sweetalert2";
 
 
