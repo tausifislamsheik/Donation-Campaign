@@ -8,16 +8,16 @@ const NavBar = () => {
     const [open, setOpen] = useState(false)
     return (
         <div>
-            <nav className='flex justify-between items-center py-6 '>
+            <nav className='md:flex justify-between items-center pt-6 '>
                 <Logo></Logo>
                 
                 <ul className='md:flex gap-8'>
-                <div className='md:hidden text-2xl  mt-8' onClick={() => setOpen(!open)}>
+                {/* <div className='md:hidden text-2xl  mt-8' onClick={() => setOpen(!open)}>
                     {
                         open === true ? <AiOutlineClose></AiOutlineClose> : <BiMenu></BiMenu>
                     }
                 
-                </div>
+                </div> */}
                     
                     <li>
                     <NavLink to="/"

@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const CardCategories = ({card}) => {
 
-    const {id, picture, title, description, price} = card || {}
+    const {id, picture, title, text_color, description, price} = card || {}
 
     const handleAddToDonation = () => {
 
@@ -42,26 +42,33 @@ const CardCategories = ({card}) => {
         
       }
 
-        // localStorage = setItem('test', )
+        
     }
 
 
     return (
-        <div className="flex justify-center items-center ">
-            <div className="card card-compact w-80 bg-base-100 shadow-xl">
-     <figure className="w-70">
-       <img src={picture} alt="" />
-     </figure>
-  <div className="card-body">
-    <div className="card-actions">
-      <button onClick={handleAddToDonation} className="btn btn-primary">Donate {price}</button>
-    </div>
-    <h2 className="card-title font-bold">{title}</h2>
-    <p>{description}</p>
-    
-  </div>
-            </div>
+        
+       <div className="relative w-full lg:w-[1120px] mx-auto">
+           {/* Image */}
+       <img src={picture}
+       className="w-[100%] object-contain rounded-lg"
+       alt={title}/>
+         {/* Donate button */}
+       <div className="bg-[#0b0b0b80] h-28 md:h-32 lg:h-36 w-[100%] absolute bottom-0 p-10 bg-opacity-25">
+       <button
+       onClick={handleAddToDonation}
+       className="p-1 md:p-3 rounded text-xl font-semibold text-white"
+       style={{ backgroundColor:text_color }}>
+       Donate ${price}
+       </button>
+        <div className="py-20">
+          <h2 className="card-title text-3xl mb-5 font-bold">{title}</h2>
+          <p>{description}</p>
         </div>
+         </div>
+       </div>
+
+
     );
 };
 
